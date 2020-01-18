@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+    html, body {
+        margin: 0;
+        padding: 0;
+        font-family: sans-serif;
+    }
+    .testOne {
+        width: 40%;
+        overflow-x: hidden;
+        padding-left: 30%;
+        padding-right: 30%;
+    }
+    .testOneText {
+        font-size: 1.3em;
+        width: 100%;
+        color: rgb(115, 108, 115);
+        text-align: center;
+    }
+    .cartOne {
+        width: 100%;
+        margin-top: 30px;
+        border-radius: 33px;
+        padding: 30px;
+        text-align: center;
+    }
+    .testOne > .one {
+        background-color: #C71A78;
+        background: linear-gradient(to bottom, #C71A78, rgb(228, 86, 164));
+        box-shadow: 3px 5px 7px 2px #C71A78;
+        border: 2px solid #C71A78;
+    }
+    .testOne > .two {
+        background-color: #004ABA;
+        background: linear-gradient(to bottom, #004ABA, rgb(75, 128, 207));
+        box-shadow: 3px 5px 7px 2px #004ABA;
+        border: 2px solid #004ABA;
+    }
+    .testOne > .three {
+        background-color: #F58220;
+        background: linear-gradient(to bottom, #F58220, rgb(245, 174, 113));
+        box-shadow: 3px 5px 7px 2px #F58220;
+        border: 2px solid #F58220;
+    }
+    .cartOneText {
+        width: 100%;
+        font-size: 2em;
+        color: rgb(255, 255, 255);
+        font-weight: 600;
+    }
+    .yes {
+        background-color: #004ABA;
+        background: linear-gradient(to bottom, #004ABA, rgb(75, 128, 207));
+        box-shadow: 3px 5px 3px 1px #004ABA;
+    }
+    .no {
+        background-color: #F58220;
+        background: linear-gradient(to bottom, #F58220, rgb(245, 174, 113));
+        box-shadow: 3px 5px 3px 1px #F58220;
+    }
+    .yes1 {
+        background-color: #C71A78;
+        background: linear-gradient(to bottom, #C71A78, rgb(228, 86, 164));
+        box-shadow: 3px 5px 3px 1px #C71A78;
+    }
+    .no1 {
+        background-color: #F58220;
+        background: linear-gradient(to bottom, #F58220, rgb(245, 174, 113));
+        box-shadow: 3px 5px 3px 1px #F58220;
+    }
+    .yes2 {
+        background-color: #C71A78;
+        background: linear-gradient(to bottom, #C71A78, rgb(228, 86, 164));
+        box-shadow: 3px 5px 3px 1px #C71A78;
+    }
+    .no2 {
+        background-color: #004ABA;
+        background: linear-gradient(to bottom, #004ABA, rgb(75, 128, 207));
+        box-shadow: 3px 5px 3px 1px #004ABA;
+    }
+    .ask {
+        display: block;
+        width: 34%;
+        margin-left: 33%;
+        padding: 15px;
+        border-radius: 50px;
+        margin-bottom: 20px;
+        font-size: 2em;
+        color: rgb(255, 255, 255);
+        background-color: royalblue;
+        text-align: center;
+        font-weight: 600;
+        transition-duration: 600ms;
+        outline: none;
+    }
+    .ask:hover {
+        box-shadow: none;
+    }
+    @media screen and (max-width: 500px) {
+        html, body {
+        margin: 0;
+        padding: 0;
+        font-family: sans-serif;
+    }
+    .testOne {
+        width: 100vw;
+        overflow-x: hidden;
+        padding-left: 0;
+        padding-right: 0;
+        box-sizing: border-box;
+    }
+    .testOneText {
+        font-size: 1.3em;
+        width: 100%;
+        color: rgb(115, 108, 115);
+        text-align: center;
+    }
+    .cartOne {
+        width: 92vw;
+        margin: 3.5vw;
+        margin-top: 30px;
+        border-radius: 33px;
+        padding: 30px;
+        text-align: center;
+        box-sizing: border-box;
+    }
+    .ask {
+        display: block;
+        width: 70%;
+        margin-left: 15%;
+        padding: 15px;
+        border-radius: 50px;
+        margin-bottom: 20px;
+        font-size: 2em;
+        color: rgb(255, 255, 255);
+        background-color: royalblue;
+        text-align: center;
+        font-weight: 600;
+        transition-duration: 600ms;
+    }
+    }
+    </style>
+    <div class="testOne">
+        <p class="testOneText">
+            Для скрининговой диагностики мигрени ответьте на три вопроса о симптомах,
+            сопровождавших Ваши головные боли в течение последних трёх месяцев
+        </p>
+        <div class="cartOne one">
+            <p class="cartOneText">
+                Чувствовали ли Вы тошноту
+                или недомогание во время
+                приступа головной боли?
+            </p>
+            <button class="yes ask">да</button>
+            <button class="no ask">нет</button>
+        </div>
+        <div class="cartOne two">
+            <p class="cartOneText">
+                Раздражал ли Вас свет или
+                громкие звуки намного сильнее,
+                чем в межприступный период?
+            </p>
+            <button class="yes1 ask">да</button>
+            <button class="no1 ask">нет</button>
+        </div>
+        <div class="cartOne three">
+            <p class="cartOneText">
+                Длился ли приступ
+                головной боли
+                24 часа и более?
+            </p>
+            <button class="yes2 ask">да</button>
+            <button class="no2 ask">нет</button>
+        </div>
+    </div>
+</body>
+</html>

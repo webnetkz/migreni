@@ -14,10 +14,10 @@
         font-family: sans-serif;
     }
     .testOne {
-        width: 40%;
+        width: 50%;
         overflow-x: hidden;
-        padding-left: 30%;
-        padding-right: 30%;
+        padding-left: 25%;
+        padding-right: 15%;
     }
     .testOneText {
         font-size: 1.3em;
@@ -86,7 +86,7 @@
         background: linear-gradient(to bottom, #004ABA, rgb(75, 128, 207));
         box-shadow: 3px 5px 3px 1px #004ABA;
     }
-    .ask {
+    #testRes, .ask {
         display: block;
         width: 34%;
         margin-left: 33%;
@@ -95,7 +95,6 @@
         margin-bottom: 20px;
         font-size: 2em;
         color: rgb(255, 255, 255);
-        background-color: royalblue;
         text-align: center;
         font-weight: 600;
         transition-duration: 600ms;
@@ -103,6 +102,16 @@
     }
     .ask:hover {
         box-shadow: none;
+    }
+    #testRes {
+        position: relative;
+        margin-top: 20px;
+        width: 50%;
+        margin-left: 30%;
+        font-size: 1.2em;
+        background-color: #004ABA;
+        background: linear-gradient(to bottom, #004ABA, rgb(75, 128, 207));
+        box-shadow: 3px 5px 3px 1px #004ABA;
     }
     @media screen and (max-width: 500px) {
         html, body {
@@ -146,6 +155,16 @@
         font-weight: 600;
         transition-duration: 600ms;
     }
+    #testRes {
+        position: relative;
+        margin-top: 20px;
+        width: 50%;
+        margin-left: 25%;
+        font-size: 1.2em;
+        background-color: #004ABA;
+        background: linear-gradient(to bottom, #004ABA, rgb(75, 128, 207));
+        box-shadow: 3px 5px 3px 1px #004ABA;
+    }
     }
     </style>
     <div class="testOne">
@@ -159,8 +178,8 @@
                 или недомогание во время
                 приступа головной боли?
             </p>
-            <button class="yes ask">да</button>
-            <button class="no ask">нет</button>
+            <button class="yes ask" onclick="ask(this);" value="1">да</button>
+            <button class="no ask" onclick="ask(this);" value="0">нет</button>
         </div>
         <div class="cartOne two">
             <p class="cartOneText">
@@ -168,8 +187,8 @@
                 громкие звуки намного сильнее,
                 чем в межприступный период?
             </p>
-            <button class="yes1 ask">да</button>
-            <button class="no1 ask">нет</button>
+            <button class="yes1 ask" onclick="ask(this);" value="1">да</button>
+            <button class="no1 ask" onclick="ask(this);" value="0">нет</button>
         </div>
         <div class="cartOne three">
             <p class="cartOneText">
@@ -177,9 +196,31 @@
                 головной боли
                 24 часа и более?
             </p>
-            <button class="yes2 ask">да</button>
-            <button class="no2 ask">нет</button>
-        </div>
+            <button class="yes2 ask" onclick="ask(this);" value="1">да</button>
+            <button class="no2 ask" onclick="ask(this);" value="0">нет</button>
+        </div>">
+        <button id="testRes">Отправить</button>
     </div>
+    <script>
+        var x = 0;
+        function ask(event) {
+            // Сбор данных и отключение кнопки
+            var ask = event;
+            ask.setAttribute('disabled', '');
+            var res = event.value;
+            // Если ответ ДА
+            if(res == 1) {
+                x++;
+            }
+            // Если ответов ДА > 2
+            if(x >= 2) {
+                alert('Migren`');
+            } 
+        }
+        
+
+        
+
+    </script>
 </body>
 </html>
